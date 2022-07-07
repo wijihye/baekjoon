@@ -6,16 +6,7 @@
 
 using namespace std;
 
-int GCD(int a, int b) {
-	if (b == 0) return a;
-	return GCD(b, a % b);
-	// 꼬리재귀, 컴파일러에서 시간 좀 줄여주기에 바로 함수 자체를 리턴 하는 것이 효율적임.
-}
-
-int arr[1000001];
-
 bool prime[1000001];
-
 
 int main() {
 
@@ -33,8 +24,6 @@ int main() {
 
 		if (is_prime) prime[i] = true;
 	}
-	//prime[0] = prime[1] = false;
-
 
 	while (1) {
 		int n;
@@ -55,7 +44,5 @@ int main() {
 		if (!conjecture) printf("Goldhach's conjecture is wrong.\n");
 	}
 	
-
-
 	return 0;
 }
