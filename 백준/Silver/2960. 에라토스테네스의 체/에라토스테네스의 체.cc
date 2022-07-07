@@ -6,14 +6,7 @@
 
 using namespace std;
 
-int GCD(int a, int b) {
-	if (b == 0) return a;
-	return GCD(b, a % b);
-	// 꼬리재귀, 컴파일러에서 시간 좀 줄여주기에 바로 함수 자체를 리턴 하는 것이 효율적임.
-}
-
 int arr[1001];
-
 
 int main() {
 
